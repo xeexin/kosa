@@ -21,7 +21,7 @@ public class ScoreScanner2 {
 
 		System.out.print("국어 성적을 입력하세요 : ");
 		kor = sc.nextInt();
-
+		
 		System.out.print("영어 성적을 입력하세요 : ");
 		eng = sc.nextInt();
 
@@ -32,7 +32,7 @@ public class ScoreScanner2 {
 		tot = kor + eng + com;
 		avg = tot / 3;
 
-		// 4. 결과 출력
+		// 4. 결과 출력	
 		System.out.println("\n[" + name + "님의 성적]");
 		System.out.println("국어 : " + kor + "\t영어 : " + eng + "\t전산 : " + com + "\n총점 : " + tot);
 		System.out.printf("평균 : %.2f\n", avg);
