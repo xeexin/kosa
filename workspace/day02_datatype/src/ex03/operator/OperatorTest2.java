@@ -11,9 +11,9 @@ public class OperatorTest2 {
 
 		// 2진 논리
 		System.out.println("------2진 논리------");
-		System.out.println(4 & 7);
-		System.out.println(4 | 7);
-		System.out.println(4 ^ 7);
+		System.out.println(x & y);
+		System.out.println(x | y);
+		System.out.println(x ^ y);
 
 		// 10진 논리
 		System.out.println("------10진 논리------");
