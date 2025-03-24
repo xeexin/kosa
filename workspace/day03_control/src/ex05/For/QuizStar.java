@@ -33,7 +33,6 @@ public class QuizStar {
 				System.out.print("*");
 			}
 			System.out.println();
-
 		}
 
 	}
