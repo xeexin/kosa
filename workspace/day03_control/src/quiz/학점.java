@@ -9,40 +9,24 @@ public class 학점 {
 		System.out.print("점수 입력(0~100) : ");
 
 		int score = new Scanner(System.in).nextInt();
-		char grade=' ';
+		char grade = ' ';
 
-		switch (score / 10) {
-		case 10:
-		case 9: {
-			grade = 'A';
-			break;
-		}
-		case 8: {
-			grade = 'B';
-			break;
-		}
-		case 7: {
-			grade = 'C';
-			break;
-		}
-		case 6: {
-			grade = 'D';
-			break;
-		}
-		case 5:
-		case 4:
-		case 3:
-		case 2:
-		case 1:
-		case 0: {
-			grade = 'F';
-			break;
-		}
+		/*
+		 * switch (score / 10) { case 10: case 9: { grade = 'A'; break; } case 8: {
+		 * grade = 'B'; break; } case 7: { grade = 'C'; break; } case 6: { grade = 'D';
+		 * break; } case 5: case 4: case 3: case 2: case 1: case 0: { grade = 'F';
+		 * break; }
+		 * 
+		 * default: System.out.println("점수는 0~100점 사이 입니다."); System.exit(0); }
+		 */
 
-		default:
-			System.out.println("점수는 0~100점 사이 입니다.");
-			System.exit(0);
-		}
+		grade = switch (score / 10) {// ex) grade = 'A'
+		case 10, 9 -> 'A';
+		case 8 -> 'B';
+		case 7 -> 'C';
+		case 6 -> 'D';
+		default -> 'F';
+		};
 
 		System.out.println(score + "점 ======> " + grade + "학점");
 
