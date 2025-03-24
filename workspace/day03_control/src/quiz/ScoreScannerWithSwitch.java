@@ -75,9 +75,11 @@ public class ScoreScannerWithSwitch {
 			System.out.println("총점 : " + tot + "점\t평균 : " + avg + "점\t" + grade + "학점");
 
 			System.out.print("계속 점수를 입력하시겠습니까? [y/n] : ");
-			yn = sc.next().charAt(0);
-			if (yn == 'N' || yn == 'n')
-				break;
+//			yn = sc.next().charAt(0);
+//			if (yn == 'N' || yn == 'n')
+//				break;
+			String ans = sc.next();
+			if(ans.equalsIgnoreCase("n"))break;
 
 		}
 
