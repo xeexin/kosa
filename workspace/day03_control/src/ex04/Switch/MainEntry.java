@@ -1,5 +1,5 @@
 //*
-package ex03.Switch;
+package ex04.Switch;
 
 import java.util.Scanner;
 

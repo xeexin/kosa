@@ -20,6 +20,8 @@ public class 학점 {
 		 * default: System.out.println("점수는 0~100점 사이 입니다."); System.exit(0); }
 		 */
 
+		//개선된 SWITCH 케이스
+		
 		grade = switch (score / 10) {// ex) grade = 'A'
 		case 10, 9 -> 'A';
 		case 8 -> 'B';
