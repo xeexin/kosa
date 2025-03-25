@@ -11,7 +11,6 @@ public class MainEntry01 {
 		Scanner sc = new Scanner(System.in);
 
 		int target = new Random().nextInt(101);
-		System.out.println(target);
 
 		int cnt = 0;
 
