@@ -17,6 +17,9 @@ public class MainEntry {
 		// 3.
 		char[] ch3 = { 'J', 'A', 'V', 'A', 'K', 'B', 'S', 'S', 'B', 'S' };
 
+		// 4.
+		char[] ch4 = new char[] { 'a', 'b', 'c' };
+
 		// 배열의 길이(크기) 확인
 		System.out.println(ch2.length);
 		System.out.println(ch3.length);
