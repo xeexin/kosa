@@ -67,6 +67,8 @@ public class ScoreScannerWithSwitch {
 			System.out.println("*********************************");
 
 		}
+		
+		
 
 	}
 }
