@@ -37,7 +37,7 @@ public class ScoreScannerWithSwitch {
 			arr[y][4] = sum / 3;
 
 			// 3. 학점
-			switch ((int) arr[y][4] / 10) { // (tot/30)
+			switch ( arr[y][4] / 10) { // (tot/30)
 			case 10:
 			case 9: {
 				ret[y] = 'A';
