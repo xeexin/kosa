@@ -22,6 +22,8 @@ public class MainEntry {
 			System.out.print(a[x] + "\t");
 		}
 
+		
+		
 		System.out.println();
 		System.out.println();
 
