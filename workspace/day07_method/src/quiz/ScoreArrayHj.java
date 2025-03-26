@@ -85,7 +85,7 @@ public class ScoreArrayHj {
 
 		} // y end
 
-		avgall = (double) totalsum / INWON; // 전체 평균
+		avgall = (double) totalsum / (INWON * 3); // 전체 평균
 		Arrays.sort(rank); // 성적 오름차순
 
 		System.out.println("\n");
