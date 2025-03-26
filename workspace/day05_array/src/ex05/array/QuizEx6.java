@@ -20,9 +20,7 @@ public class QuizEx6 {
 		}
 
 		// 출력
-		for (
-
-				int y = 0; y < a.length; y++) {
+		for (int y = 0; y < a.length; y++) {
 			for (int x = 0; x < a[0].length; x++) {
 				System.out.print(a[y][x] + "\t");
 			}
