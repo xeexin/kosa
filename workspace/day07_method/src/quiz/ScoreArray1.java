@@ -92,5 +92,7 @@ public class ScoreArray1 {
 		System.out.println("========================");
 
 		sc.close(); // Scanner 닫기
+		
+		
 	}
 }
