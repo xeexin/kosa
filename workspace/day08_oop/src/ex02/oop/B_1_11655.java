@@ -8,11 +8,16 @@ public class B_1_11655 {
 		String ret = "";
 
 		for (int x = 0; x < s.length(); x++) {
-			if (s.charAt(x) >= 'a' && s.charAt(x) <= 'z' || s.charAt(x) >= 'A' && s.charAt(x) <= 'Z') {
+
+			if (s.charAt(x) >= 'a' && s.charAt(x) <= 'l' || s.charAt(x) >= 'A' && s.charAt(x) <= 'L') {
 				ret += (char) (s.charAt(x) + 13);
+
+			} else if (s.charAt(x) >= 'n' && s.charAt(x) <= 'z' || s.charAt(x) >= 'N' && s.charAt(x) <= 'Z') {
+				ret += (char) (s.charAt(x) - 13);
 			} else {
-				ret += s.charAt(x);
+				ret += (char) (s.charAt(x));
 			}
+
 		}
 
 		System.out.println(ret);
