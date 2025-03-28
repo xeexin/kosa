@@ -1,6 +1,5 @@
 package ex03.oop;
 
-import java.nio.channels.Channel;
 
 public class TV {
 
