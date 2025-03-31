@@ -50,5 +50,15 @@ public class TV {
 	public void display() {
 		System.out.printf("color : %s\nchannel : %d\n", this.color, this.channel);
 	}
-
+	
+	public void disp() {
+		System.out.println(channel +","+ color);
+	}
+	
+	// toString() 함수 오버라이딩해서 사용 함! 
+	public String toString() {
+		String str = channel +","+ color;
+		return str;
+	}
+	
 }
