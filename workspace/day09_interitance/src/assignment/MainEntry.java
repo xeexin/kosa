@@ -11,7 +11,8 @@ public class MainEntry {
 
 		Regular reg = new Regular(2, "hj", "it", 1234, 900);
 		reg.disp();
-		System.out.println("-------------------");
+		System.out.
+		println("-------------------");
 		Regular reg2 = new Regular();
 		reg2.disp();
 		System.out.println("-------------------");
@@ -21,7 +22,7 @@ public class MainEntry {
 		System.out.println("-------------------");
 		System.out.println("-------------------");
 
-		Sales sales = new Sales(1.5);
+		Sales sales = new Sales(0.5);
 		sales.disp();
 
 		System.out.println("-------------------");
