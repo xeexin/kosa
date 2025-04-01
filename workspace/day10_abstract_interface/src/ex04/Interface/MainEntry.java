@@ -49,6 +49,8 @@ class Rect implements D {
 
 } // RECT END
 
+
+
 class Shape {
 
 } // SHAPE END
@@ -101,8 +103,8 @@ public class MainEntry {
 		m.draw();
 		m.view();
 		m.show();
-		
-		B b = new Multi();
+
+		B b = new Multi(); // B가 가지는 함수만 가능하다.
 		b.view();
 
 	}
