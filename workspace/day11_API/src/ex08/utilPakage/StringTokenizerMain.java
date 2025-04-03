@@ -53,9 +53,9 @@ public class StringTokenizerMain {
 		
 		// split()이용하기
 		String str = "김연아/박태환/손연재/이휘/김지은| 박준 &공현진";
-		String[] ret = str.split("/");
+		String[] ret = str.split("/|&");
 		for(int x=0; x<ret.length; x++) {
-			System.out.println(ret[x]);
+			System.out.println(ret[x].trim());
 		}
 	}
 }
