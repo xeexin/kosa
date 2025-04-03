@@ -20,7 +20,7 @@ public class StringBufferMethod {
 
 		
 		System.out.println(sb.indexOf("your")); //해당 문자열이 들어있는 위치 값 출력
-		System.out.println(sb.indexOf("s"));  // indexOf는 앞에 만나는 순서로 찍어버림
+		System.out.println(sb.indexOf("s"));  // indexOf는 앞에 만나는 문자열 찍어버림
 		System.out.println(sb.lastIndexOf("s")); // 마지막에 만난 문자열 찍음
 
 		sb.delete(0, 5);// 삭제
