@@ -37,7 +37,7 @@ public class MainEntry {
 		System.out.println(len + "         /        " + size);
 		System.out.println(sb.hashCode()); // 10진수 형태의 주소 위치  ->  같은 주소를 공유함. 메모리 낭비 없음
 		
-		sb.trimToSize()	; //용량 크기 조절함
+		sb.trimToSize()	; //용량 크기 조절함(줄여줌) 메모리 낭비 줄임
 		size = sb.capacity();
 		System.out.println(len + "         /        " + size);
 
