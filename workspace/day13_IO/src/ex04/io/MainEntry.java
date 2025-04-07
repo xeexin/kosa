@@ -11,7 +11,7 @@ public class MainEntry {
 
 		System.out.println("input = ");
 //		String str1 = br.readLine(); // 예외 처리하기, 여러개의 데이터 입력 받기
-		int str1 = Integer.parseInt(br.readLine()); // 예외 처리하기, 여러개의 데이터 입력 받기
+		int str1 = Integer.parseInt(br.readLine()); // 예외 처리하기, 여러개의 데이터 입력 받기 
 
 		System.out.println("input = ");
 		int str2 = Integer.parseInt(br.readLine()); // 예외 처리하기, 여러개의 데이터 입력 받기
