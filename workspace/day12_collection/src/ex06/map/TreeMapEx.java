@@ -13,7 +13,7 @@ public class TreeMapEx {
 		tm.put("kk", 1000);
 		
 		System.out.println("name : "+ tm.get("aa"));
-		System.out.println(tm);
+		System.out.println(tm); // { key=value, , , }  key 값으로 정렬되어서 나옴! -> 자동정렬
 	}
 
 }
