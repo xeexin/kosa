@@ -5,6 +5,8 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
+
+//HashMap<String, HashMap> 구조 
 public class HashMapEx2 {
 	static HashMap phoneBook = new HashMap();
 
