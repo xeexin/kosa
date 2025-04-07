@@ -48,7 +48,7 @@ public class HashMapEx {
 		System.out.println("총점 : " + total);
 		System.out.println("평균 : " + (float) total / set.size());
 		System.out.println("최고점 : " + Collections.max(values));
-		System.out.println("최하점 : " + Collections.min(values));
+		System.out.println("최하점 : " + Collections.min(values\));
 
 		// Set set2 = (Set) map.entrySet().iterator();
 
