@@ -9,7 +9,9 @@ public class MainEntry {
 		File file = null;
 		byte[] fileName = new byte[100];
 		String strName;
-		System.out.println("file name = "); // 1.상대 경로 _ memo.txt         2.절대 경로 _ C:\MSA_th2\1_java\kosa\workspace\day13_IO\memo.txt
+		System.out.println("file name = "); 
+		// 1.상대 경로 _ memo.txt        
+		// 2.절대 경로 _ C:\MSA_th2\1_java\kosa\workspace\day13_IO\memo.txt
 
 		System.in.read(fileName);
 		strName = new String(fileName).trim(); // 위에서 읽어낸 파일 이름 문자열로 변환
