@@ -12,13 +12,16 @@ public class FileOutputStreamEx {
 		OutputStream os = null;
 
 		try {
-			os = new FileOutputStream("memo.txt"); // 상대경로
+//			os = new FileOutputStream("memo.txt"); // 상대경로
+			os = new FileOutputStream("C:/app/yuna.txt"); // 절대경로
+//			os = new FileOutputStream("C:\\app\\yuna.txt"); // 절대경로
 
 			while (true) {
 				System.out.println("문자열을 입력해주세요 : ");
 				String str = sc.nextLine() + "\r\n";
 
-				if (str.toUpperCase().equals("EXIT\r\n")) {
+				// if (str.toUpperCase().equals("EXIT\r\n")) {
+				if (str.equalsIgnoreCase("EXIT\r\n")) {
 					System.out.println(str.length() + "byte만큼 썼습니다.");
 					break;
 				} // end if
