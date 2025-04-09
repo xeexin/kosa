@@ -8,12 +8,12 @@ public class BMIMAIN {
 
 	static BMIManager bm = new BMIManager();
 
-	public static void main(String[] args) throws NumberFormatException, IOException {
+	public static void main(String[] args) throws NumberFormatException, IOException, ClassNotFoundException {
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		while (true) {
-			System.out.print("1.입력 , 2:삭제, 3:출력, 4:수정, 5:종료 : ");
+			System.out.print("1.입력 , 2:삭제, 3:출력, 4:수정, 5:파일 저장, 6:파일 불러오기,  7:종료 : ");
 			int num = Integer.parseInt(br.readLine());
 
 			switch (num) {
@@ -34,6 +34,13 @@ public class BMIMAIN {
 				bm.display();
 				break;
 
+			}case 5: {
+				bm.saveFile();
+				break;
+				
+			}case 6:{
+				bm.loadFile();
+				break;
 			}
 			case 4: {
 				bm.set();
@@ -42,7 +49,7 @@ public class BMIMAIN {
 				break;
 
 			}
-			case 5: {
+			case 7: {
 				System.out.println("프로그램을 종료합니다.");
 				System.exit(0);
 			}

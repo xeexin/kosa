@@ -1,10 +1,13 @@
 package quiz;
 
 import java.io.BufferedReader;
+import java.io.EOFException;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
@@ -12,8 +15,6 @@ public class BMIManager {
 
 	ArrayList<BMIClass> arr = new ArrayList<BMIClass>();
 	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-	ObjectOutputStream oos = null;
-	File file = new File("BMI.txt");
 
 	public void add() throws IOException {
 		System.out.print("이름을 입력하세요 : ");
@@ -37,28 +38,7 @@ public class BMIManager {
 		String ret = getBMI(height, weight);
 
 		arr.add(new BMIClass(name, gender, height, weight, ret));
-		
-		try {
-			
-			FileOutputStream fos = new FileOutputStream(file, true); // append mode-> 안하면 계속 덮어씀
-			oos = new ObjectOutputStream(fos);
-			
-			oos.writeObject(name);
-			oos.writeObject(gender);
-			oos.writeObject(height);
-			oos.writeObject(weight);
-			oos.writeObject(ret);
-			
-			System.out.println("BMI.txt saved");
 
-			
-		}catch(Exception e) {
-			e.printStackTrace();
-		}finally {
-			oos.close();
-		}
-		
-		
 	}
 
 	public String getBMI(double height, double weight) {
@@ -136,6 +116,84 @@ public class BMIManager {
 			}
 		}
 
+	}
+
+	public void saveFile() throws IOException {
+
+		File file = new File("BMI.txt");
+		FileOutputStream fos = null;
+		ObjectOutputStream oos = null;
+
+		String name = null;
+		Boolean gender = null;
+		double weight = 0.0;
+		double height = 0.0;
+		String ret = null;
+
+		try {
+			fos = new FileOutputStream(file);
+			oos = new ObjectOutputStream(fos);
+
+			for (BMIClass bmi : arr) {
+				name = bmi.getName();
+				gender = bmi.getGender();
+				weight = bmi.getWeight();
+				height = bmi.getHeight();
+				ret = bmi.getRet();
+				
+				
+				oos.writeObject(name);
+				oos.writeObject(gender);
+				oos.writeObject(height);
+				oos.writeObject(weight);
+				oos.writeObject(ret);
+			}
+
+			System.out.println("파일 저장 완료");
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			oos.close();
+			fos.close();
+		}
+
+	}
+
+	public void loadFile() throws IOException, ClassNotFoundException {
+
+		File file = new File("bmi.txt");
+		FileInputStream fis = null;
+		ObjectInputStream ois = null;
+
+		String name = null;
+		Boolean gender = null;
+		double weight = 0.0;
+		double height = 0.0;
+		String ret = null;
+
+		try {
+			fis = new FileInputStream(file);
+			ois = new ObjectInputStream(fis);
+
+			System.out.println("    >> 사람 정보 << \n");
+			System.out.println("이름 \t 성별 \t 키 \t 몸무게 \t bmi");
+
+			while (true) {
+				name = (String) ois.readObject();
+				gender = (Boolean) ois.readObject();
+				height = (Double) ois.readObject();
+				weight = (Double) ois.readObject();
+				ret = (String) ois.readObject();
+				System.out.print(name + "\t" + gender + "\t" + height + "\t" + weight + "\t" + ret + "\r\n");
+			}
+
+		} catch (EOFException e) {
+			System.out.println("파일 로드 완료");
+		} finally {
+			fis.close();
+			ois.close();
+		}
 	}
 
 }
