@@ -28,13 +28,15 @@ public class MainEntry {
 	public static void main(String[] args) {
 		// 1. 외부 클래스 객체 생성
 		OuterClass oc = new OuterClass();
-		
-		
+
 		// 2. 이너 클래스 객체 생성
-		OuterClass.InnerClass ic = oc.new InnerClass(); 
+		OuterClass.InnerClass ic = oc.new InnerClass();
 		ic.disp();
 		ic.show();
-		
+
+		System.out.println("----------------------------------------");
+		// 3. 이너 클래스 한번에 호출
+		OuterClass.InnerClass innerClass = new OuterClass().new InnerClass();
 	}
 
 }
