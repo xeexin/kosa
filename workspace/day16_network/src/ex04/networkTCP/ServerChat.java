@@ -28,9 +28,9 @@ public class ServerChat {
 			byte[] buffer = str.getBytes("UTF-8");
 			String msg = new String(buffer, "utf-8");
 
-			ps.print("                  : 에서 수신 메세지 ===> " + msg);
+			ps.println("                  : 에서 수신 메세지 ===> " + msg);
 			
-//			ps.close();
+//			ps.close(); -> PrintStream은 닫으면 안됨!	
 			br.close();
 			client.close();
 		} // end while
