@@ -9,8 +9,8 @@ public class URLEx2 {
 		URL url = new URL("https://www.google.com/search?q=capybara&oq=capybara&gs_lcrp=EgZjaHJvbWUqDQgAEAAY4wIYsQMYgAQyDQgAEAAY4wIYsQMYgAQyCggBEC4YsQMYgAQyBwgCEAAYgAQyBwgDEC4YgAQyCggEEAAYiwMYgAQyEAgFEC4YiwMYmQMYqAMYgAQyCggGEAAYiwMYgAQyCggHEAAYiwMYgAQyCggIEAAYiwMYgAQyCggJEAAYiwMYgATSAQg0Mjg5ajFqN6gCCLACAQ&sourceid=chrome&ie=UTF-8");
 		
 		
-//		https://www.google.com/ 
-//			search?
+//		https://www.google.com
+//			/search?
 //					q=capybara //속성 = 값 & 속성= 값2 & 속성 = 값3...
 //					&oq=capybara
 //					&gs_lcrp=EgZjaHJvbWUqDQgAEAAY4wIYsQMYgAQyDQgAEAAY4wIYsQMYgAQyCggBEC4YsQMYgAQyBwgCEAAYgAQyBwgDEC4YgAQyCggEEAAYiwMYgAQyEAgFEC4YiwMYmQMYqAMYgAQyCggGEAAYiwMYgAQyCggHEAAYiwMYgAQyCggIEAAYiwMYgAQyCggJEAAYiwMYgATSAQg0Mjg5ajFqN6gCCLACAQ
